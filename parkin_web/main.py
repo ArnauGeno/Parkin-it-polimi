@@ -111,6 +111,9 @@ async def api_root():
     """
     return {"message": "Welcome to Parkin-It API"}
 
+# This is needed for Vercel deployment
+app_handler = app
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
